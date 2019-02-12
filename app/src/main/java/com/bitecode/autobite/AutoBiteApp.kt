@@ -4,6 +4,7 @@ import android.app.Application
 import com.bitecode.autobite.di.shared.AppComponent
 import com.bitecode.autobite.di.shared.AppModule
 import com.bitecode.autobite.di.shared.DaggerAppComponent
+import com.jakewharton.threetenabp.AndroidThreeTen
 
 class AutoBiteApp : Application() {
 
@@ -18,5 +19,7 @@ class AutoBiteApp : Application() {
         appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(this))
             .build()
+
+        AndroidThreeTen.init(this)
     }
 }

@@ -1,9 +1,9 @@
-package com.bitecode.autobite.screens
+package com.bitecode.autobite
 
 import android.app.Application
-import com.bitecode.rickshawapp.di.shared.AppComponent
-import com.bitecode.rickshawapp.di.shared.AppModule
-import com.bitecode.rickshawapp.di.shared.DaggerAppComponent
+import com.bitecode.autobite.di.shared.AppComponent
+import com.bitecode.autobite.di.shared.AppModule
+import com.bitecode.autobite.di.shared.DaggerAppComponent
 
 class AutoBiteApp : Application() {
 

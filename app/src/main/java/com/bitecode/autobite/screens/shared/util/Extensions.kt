@@ -16,3 +16,12 @@ fun CompositeDisposable.set(disposable: Disposable) {
     clear()
     add(disposable)
 }
+
+fun Int.asTwoDigit(): String {
+    return when(this) {
+        in 0..9   -> "0$this"
+        in 10..99 -> this.toString()
+        in -9..-1 -> this.toString()
+        else      -> throw IllegalArgumentException("Can't represent $this in double digits")
+    }
+}

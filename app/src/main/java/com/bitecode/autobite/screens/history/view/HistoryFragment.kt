@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -13,6 +14,7 @@ import com.bitecode.autobite.screens.history.core.HistoryViewModel
 import com.bitecode.autobite.screens.history.core.HistoryViewModelFactory
 import com.bitecode.autobite.screens.history.core.UiOrder
 import com.bitecode.autobite.screens.shared.core.Trip
+import com.bitecode.autobite.screens.tripdetails.view.TripDetailsDialog
 import kotlinx.android.synthetic.main.fra_history.view.tripsRCY
 
 class HistoryFragment : Fragment(), TripsAdapter.ClickListener {
@@ -38,7 +40,8 @@ class HistoryFragment : Fragment(), TripsAdapter.ClickListener {
 
 
     override fun onTripClicked(id: Long) {
-        // Code for showing the trip details dialog
+        TripDetailsDialog().apply { arguments = bundleOf("TRIP_ID" to id) }
+            .show(childFragmentManager, "Trip Details")
     }
 
 

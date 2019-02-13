@@ -2,6 +2,8 @@ package com.bitecode.autobite.di.shared
 
 import android.app.Application
 import androidx.room.Room
+import com.bitecode.autobite.screens.shared.data.repo.TripRepository
+import com.bitecode.autobite.screens.shared.data.repo.TripRepositoryImpl
 import com.bitecode.autobite.screens.shared.data.room.AppDatabase
 import com.bitecode.autobite.screens.shared.data.room.TripsDao
 import dagger.Module
@@ -10,6 +12,10 @@ import javax.inject.Singleton
 
 @Module
 class AppModule(private val application: Application) {
+
+    @Singleton
+    @Provides
+    fun providesTripRepository(tripsDao: TripsDao): TripRepository = TripRepositoryImpl(tripsDao)
 
     @Singleton
     @Provides

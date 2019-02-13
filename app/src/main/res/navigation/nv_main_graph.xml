@@ -10,4 +10,9 @@
         android:name="com.bitecode.autobite.screens.history.view.HistoryFragment"
         android:label="HistoryFragment"
         tools:layout="@layout/fra_history" />
+    <fragment
+        android:id="@+id/wallet"
+        android:name="com.bitecode.autobite.screens.wallet.view.WalletFragment"
+        android:label="WalletFragment"
+        tools:layout="@layout/fra_wallet" />
 </navigation>

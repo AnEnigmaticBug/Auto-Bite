@@ -1,12 +1,25 @@
 package com.bitecode.autobite.di.shared
 
 import android.app.Application
+import androidx.room.Room
+import com.bitecode.autobite.screens.shared.data.room.AppDatabase
+import com.bitecode.autobite.screens.shared.data.room.TripsDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
 @Module
 class AppModule(private val application: Application) {
+
+    @Singleton
+    @Provides
+    fun providesTripsDao(appDatabase: AppDatabase): TripsDao = appDatabase.tripsDao()
+
+    @Singleton
+    @Provides
+    fun providesAppDatabase(application: Application): AppDatabase = Room
+        .databaseBuilder(application, AppDatabase::class.java, "autobite.db")
+        .build()
 
     @Singleton
     @Provides

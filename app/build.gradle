@@ -41,6 +41,12 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
     implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
 
+    def room_version = "2.1.0-alpha04"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+
+
     implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
 
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'

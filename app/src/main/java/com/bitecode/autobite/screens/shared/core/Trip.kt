@@ -1,5 +1,7 @@
 package com.bitecode.autobite.screens.shared.core
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import org.threeten.bp.LocalDateTime
 
 /**
@@ -8,8 +10,9 @@ import org.threeten.bp.LocalDateTime
  * @property cost  is the cost in INR incurred in the trip
  * @property distance   is the  distance covered  in km in the trip
  * */
+@Entity(tableName = "Trips")
 data class Trip(
-    val id: Long,
+    @PrimaryKey(autoGenerate = true) val id: Long,
     val pickupPoint: String,
     val destination: String,
     val cost: Int,

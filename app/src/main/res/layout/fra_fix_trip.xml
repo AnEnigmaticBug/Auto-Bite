@@ -32,11 +32,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+    <!-- imeOptions and inputType are there to make keyboard's next button work -->
     <AutoCompleteTextView
         android:id="@+id/pickupPointTXT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:imeOptions="actionNext"
+        android:inputType="text"
         android:textColor="@color/blk01"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView12"
@@ -55,11 +58,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pickupPointTXT" />
 
+    <!-- imeOptions and inputType are there to make keyboard's previous button work -->
     <AutoCompleteTextView
         android:id="@+id/destinationTXT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:imeOptions="actionPrevious"
+        android:inputType="text"
         android:textColor="@color/blk01"
         app:layout_constraintEnd_toEndOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="@+id/textView12"

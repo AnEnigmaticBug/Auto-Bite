@@ -15,4 +15,9 @@
         android:name="com.bitecode.autobite.screens.wallet.view.WalletFragment"
         android:label="WalletFragment"
         tools:layout="@layout/fra_wallet" />
+    <fragment
+        android:id="@+id/map"
+        android:name="com.bitecode.autobite.screens.fixtrip.view.FixTripFragment"
+        android:label="FixTripFragment"
+        tools:layout="@layout/fra_fix_trip" />
 </navigation>

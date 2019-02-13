@@ -12,6 +12,11 @@ interface TripRepository {
     fun getTrips(): Flowable<List<Trip>>
 
     /**
+     * Gives the trip having id equal to the passed-in id.
+     * */
+    fun getTripById(id: Long): Flowable<Trip>
+
+    /**
      * Adds the trip to the database. The passed-in object's id is irrelevant.
      * */
     fun addTrip(trip: Trip): Completable

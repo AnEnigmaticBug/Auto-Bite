@@ -29,6 +29,10 @@ class TripRepositoryImpl(private val tripsDao: TripsDao) : TripRepository {
         return tripsDao.getTrips()
     }
 
+    override fun getTripById(id: Long): Flowable<Trip> {
+        return tripsDao.getTripById(id)
+    }
+
     override fun addTrip(trip: Trip): Completable {
         return Completable.create { _emitter ->
             try {

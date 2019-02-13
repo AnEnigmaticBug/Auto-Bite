@@ -13,6 +13,9 @@ interface TripsDao {
     @Query("SELECT * FROM Trips ORDER BY datetime DESC")
     fun getTrips(): Flowable<List<Trip>>
 
+    @Query("SELECT * FROM Trips WHERE id = :id")
+    fun getTripById(id: Long): Flowable<Trip>
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addTrip(trip: Trip)
 }

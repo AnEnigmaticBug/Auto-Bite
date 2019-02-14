@@ -11,6 +11,7 @@
         <item name="android:statusBarColor">@color/gry01</item>
         <item name="android:windowBackground">@color/wht01</item>
         <item name="android:colorEdgeEffect">@color/gry03</item>
+        <item name="android:textCursorDrawable">@drawable/sh_cursor</item>
     </style>
 
 </resources>

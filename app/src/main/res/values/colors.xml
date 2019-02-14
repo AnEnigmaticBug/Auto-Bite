@@ -7,5 +7,6 @@
     <color name="blk01">#FF000000</color>
     <color name="gry01">#FF3C3C3C</color>
     <color name="gry02">#FFD9D9D9</color>
+    <color name="gry03">#FF767676</color>
     <color name="wht01">#FFFFFFFF</color>
 </resources>

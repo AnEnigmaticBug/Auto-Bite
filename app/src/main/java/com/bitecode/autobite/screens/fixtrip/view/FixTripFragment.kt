@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bitecode.autobite.R
 import kotlinx.android.synthetic.main.fra_fix_trip.*
 import kotlinx.android.synthetic.main.fra_fix_trip.view.destinationTXT
@@ -44,7 +46,7 @@ class FixTripFragment : Fragment() {
             } else if(pickupPointTXT.text.toString() == destinationTXT.text.toString()) {
                 Toast.makeText(context, "Please ensure that pickup point and destination are different", Toast.LENGTH_SHORT).show()
             } else {
-                // Show the next screen
+                findNavController().navigate(R.id.action_map_to_showRoute)
             }
         }
 

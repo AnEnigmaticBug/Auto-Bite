@@ -19,5 +19,14 @@
         android:id="@+id/map"
         android:name="com.bitecode.autobite.screens.fixtrip.view.FixTripFragment"
         android:label="FixTripFragment"
-        tools:layout="@layout/fra_fix_trip" />
+        tools:layout="@layout/fra_fix_trip">
+        <action
+            android:id="@+id/action_map_to_showRoute"
+            app:destination="@id/showRoute" />
+    </fragment>
+    <fragment
+        android:id="@+id/showRoute"
+        android:name="com.bitecode.autobite.screens.showroute.view.ShowRouteFragment"
+        android:label="ShowRouteFragment"
+        tools:layout="@layout/fra_show_route" />
 </navigation>

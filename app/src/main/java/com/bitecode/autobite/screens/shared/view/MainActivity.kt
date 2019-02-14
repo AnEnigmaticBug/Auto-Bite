@@ -17,10 +17,11 @@ class MainActivity : AppCompatActivity() {
 
         findNavController(R.id.navHostFRA).addOnDestinationChangedListener { _, destination, _ ->
             screenTitleLBL.text = when(destination.id) {
-                R.id.wallet  -> "Wallet"
-                R.id.map     -> "Fix Trip"
-                R.id.history -> "History"
-                else         -> throw IllegalStateException("Navigated to destination: ${destination.label}")
+                R.id.wallet    -> "Wallet"
+                R.id.map       -> "Fix Trip"
+                R.id.showRoute -> "Show Route"
+                R.id.history   -> "History"
+                else           -> throw IllegalStateException("Navigated to destination: ${destination.label}")
             }
         }
     }

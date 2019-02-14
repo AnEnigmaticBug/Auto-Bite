@@ -24,6 +24,14 @@
             android:windowSoftInputMode="adjustPan" />
 
         <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDd3FT1AtiQMzD_70EgalaBWlbG-A7fm7M"/>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>

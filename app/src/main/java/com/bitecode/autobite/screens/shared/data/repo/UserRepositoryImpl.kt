@@ -5,8 +5,15 @@ import androidx.core.content.edit
 import com.bitecode.autobite.screens.shared.core.User
 import io.reactivex.Completable
 import io.reactivex.Maybe
+import io.reactivex.schedulers.Schedulers
 
 class UserRepositoryImpl(private val prefs: SharedPreferences) : UserRepository {
+
+    init {
+        setUser(User(267871, "Nishant Mahajan", 760))
+            .subscribeOn(Schedulers.io())
+            .subscribe()
+    }
 
     override fun getUser(): Maybe<User> {
         val id = prefs.getLong("ID", 0L)

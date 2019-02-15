@@ -2,6 +2,8 @@ package com.bitecode.autobite.di.shared
 
 import com.bitecode.autobite.di.history.HistoryComponent
 import com.bitecode.autobite.di.history.HistoryModule
+import com.bitecode.autobite.di.showroute.ShowRouteComponent
+import com.bitecode.autobite.di.showroute.ShowRouteModule
 import com.bitecode.autobite.di.tripdetails.TripDetailsComponent
 import com.bitecode.autobite.di.tripdetails.TripDetailsModule
 import com.bitecode.autobite.di.wallet.WalletComponent
@@ -18,4 +20,6 @@ interface AppComponent {
     fun newTripDetailsComponent(m1: TripDetailsModule): TripDetailsComponent
 
     fun newWalletComponent(m1: WalletModule): WalletComponent
+
+    fun newShowRouteComponent(m1: ShowRouteModule): ShowRouteComponent
 }

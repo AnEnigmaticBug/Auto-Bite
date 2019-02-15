@@ -4,10 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.room.Room
-import com.bitecode.autobite.screens.shared.data.repo.TripRepository
-import com.bitecode.autobite.screens.shared.data.repo.TripRepositoryImpl
-import com.bitecode.autobite.screens.shared.data.repo.UserRepository
-import com.bitecode.autobite.screens.shared.data.repo.UserRepositoryImpl
+import com.bitecode.autobite.screens.shared.data.repo.*
 import com.bitecode.autobite.screens.shared.data.room.AppDatabase
 import com.bitecode.autobite.screens.shared.data.room.TripsDao
 import dagger.Module
@@ -16,6 +13,10 @@ import javax.inject.Singleton
 
 @Module
 class AppModule(private val application: Application) {
+
+    @Singleton
+    @Provides
+    fun providesRickshawRepository(): RickshawRepository = RickshawRepositoryImpl()
 
     @Singleton
     @Provides

@@ -18,6 +18,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.PolylineOptions
@@ -74,6 +75,7 @@ class ShowRouteFragment : Fragment(), OnMapReadyCallback {
                         Log.d("ShowRouteFragment", "(${rickshaw.lat}, ${rickshaw.lng})")
                         googleMap.addMarker(
                             MarkerOptions()
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.rickshaw))
                                 .position(LatLng(rickshaw.lat, rickshaw.lng))
                                 .title(rickshaw.registrationNumber)
                         )
@@ -83,6 +85,7 @@ class ShowRouteFragment : Fragment(), OnMapReadyCallback {
                     Log.d("ShowRouteFragment", "Rickshaw Allotted")
                     googleMap.addMarker(
                         MarkerOptions()
+                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.rickshaw))
                             .position(LatLng(order.rickshaw.lat, order.rickshaw.lng))
                             .title(order.rickshaw.registrationNumber)
                     )

@@ -18,9 +18,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.PolylineOptions
+import com.google.android.gms.maps.model.*
 import kotlinx.android.synthetic.main.fra_show_route.view.*
 
 class ShowRouteFragment : Fragment(), OnMapReadyCallback {
@@ -74,6 +72,7 @@ class ShowRouteFragment : Fragment(), OnMapReadyCallback {
                         Log.d("ShowRouteFragment", "(${rickshaw.lat}, ${rickshaw.lng})")
                         googleMap.addMarker(
                             MarkerOptions()
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.autoricksaw))
                                 .position(LatLng(rickshaw.lat, rickshaw.lng))
                                 .title(rickshaw.registrationNumber)
                         )
